@@ -837,7 +837,7 @@ AGClientSocket.prototype._processOutboundEvent = function (event, data, options,
     this.connect();
   }
 
-  if(this.authState !== this.AUTHENTICATED) {
+  if(!expectResponse && this.authState !== this.AUTHENTICATED) {
     return
   }
 
